@@ -1,0 +1,374 @@
+/* ===========================
+   GLOBAL
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.service-wrapper {
+  padding-top: 0;
+  background: #fff;
+}
+
+.service-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+.service-hero-section {
+  background: #faf9f6;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.service-hero-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+  line-height: 1.05;
+}
+
+.service-hero-sub {
+  font-size: 20px;
+  color: #666;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   SERVICE CARDS GRID
+=========================== */
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 60px 40px 80px 40px;
+}
+
+.service-card {
+  background: linear-gradient(to bottom right, #f0fbef, #ffffff);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.service-card-icon-box {
+  width: 80px;
+  height: 80px;
+  background: #16a34a;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.service-card-icon-box svg {
+  width: 40px;
+  height: 40px;
+}
+
+.service-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.service-card-text {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.service-card-feature {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.service-card-feature svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+  width: 20px;
+  height: 20px;
+  color: #16a34a;
+}
+
+.service-card-feature-title {
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.service-card-feature-text {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* ===========================
+   HOW IT WORKS
+=========================== */
+.service-how-section {
+  background: linear-gradient(to right, #15803d, #166534);
+  padding: 60px;
+  border-radius: 30px;
+  margin: 0 30px 60px 30px;
+  color: #fff;
+}
+
+.service-how-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service-how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-how-item {
+  text-align: center;
+}
+
+.service-how-number {
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px auto;
+  color: #fff;
+}
+
+.service-how-step-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.service-how-step-text {
+  font-size: 15px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* ===========================
+   TABLET (600px — 1023px)
+=========================== */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .service-wrapper {
+    /* padding-top: 72px; */
+  }
+
+  .service-container {
+    max-width: 800px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .service-hero-section {
+    background: #faf9f6;
+    /* //linear-gradient(to bottom right, #f6fdf7, #ffffff); */
+    padding: 64px 0;
+  }
+  .service-hero-title {
+    font-size: 38px;
+    margin-bottom: 18px;
+  }
+  .service-hero-sub {
+    font-size: 18px;
+    max-width: 740px;
+  }
+
+  .service-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin: 0 auto 60px auto;
+  }
+
+  .service-card {
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  }
+
+  .service-card-icon-box {
+    width: 70px;
+    height: 70px;
+  }
+  .service-card-icon-box svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .service-card-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .service-card-text {
+    margin-bottom: 18px;
+  }
+
+  .service-card-feature {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .service-card-feature svg {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+  }
+
+  .service-how-section {
+    padding: 48px;
+    border-radius: 24px;
+    margin-bottom: 48px;
+  }
+  .service-how-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .service-how-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .service-how-number {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .service-how-step-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .service-how-step-text {
+    font-size: 14px;
+  }
+}
+
+/* ===========================
+   MOBILE (0 — 599px)
+=========================== */
+@media (max-width: 599px) {
+  .service-wrapper {
+    padding-top: 60px;
+  }
+
+  .service-container {
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .service-hero-section {
+    background:#faf9f6;
+     /* linear-gradient(to bottom right, #f6fdf7, #ffffff); */
+    padding: 40px 24px;
+  }
+  .service-hero-title {
+    font-size: 40px;
+    margin-bottom: 12px;
+  }
+  .service-hero-sub {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .service-card-grid {
+    grid-template-columns: 1fr;
+    /* gap: 1px; */
+    margin-top: 0px;
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-bottom: 40px;
+  }
+
+  .service-card {
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+
+  .service-card-icon-box {
+    width: 56px;
+    height: 56px;
+  }
+  .service-card-icon-box svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .service-card-text {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .service-card-feature {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .service-card-feature svg {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+  }
+
+  .service-how-section {
+    padding: 28px;
+    border-radius: 18px;
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-bottom: 32px;
+  }
+  .service-how-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .service-how-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .service-how-number {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .service-how-step-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .service-how-step-text {
+    font-size: 13px;
+  }
+}

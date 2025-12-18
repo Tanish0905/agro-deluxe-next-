@@ -1,0 +1,130 @@
+/* HIDE ON DESKTOP */
+.mobile-navbar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-logo-text{
+    white-space: nowrap;
+    font-size: 18px;
+    font-family: Copperplate Gothic Bold;
+    margin: 0;
+    line-height:1;
+  }
+  @media (max-width: 370px) {
+    .mobile-logo-text {
+      white-space: nowrap;
+      font-size: 15px;
+      font-family: Copperplate Gothic Bold;
+      margin: 0;
+      line-height:1;    }
+  }
+  
+  .mobile-navbar {
+    display: block;
+    position: relative;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+  }
+
+  /* HEADER (STAYS VISIBLE ALWAYS) */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    height: 65px;
+    position: fixed;      /* ⭐ stays at top */
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    background: #fff;
+    z-index: 10001;
+  }
+  
+  .mobile-logo-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* HAMBURGER */
+  .hamburger {
+    width: 28px;
+    height: 22px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .line {
+    height: 3px;
+    background: #000;
+    border-radius: 3px;
+    transition: 0.35s ease;
+  }
+
+  /* HAMBURGER -> X ANIMATION */
+  .line.open:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .line.open:nth-child(2) {
+    opacity: 0;
+  }
+  .line.open:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* OVERLAY (covers whole screen EXCEPT header) */
+  .overlay {
+    position: fixed;
+    top: 64px; /* header height */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 64px);
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 10000;
+  }
+
+  /* DRAWER BELOW HEADER */
+  .drawer {
+    position: fixed;
+    top: 64px; /* starts below header */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    transition: max-height 0.35s ease;
+    overflow: hidden;
+    max-height: 0; /* closed */
+    z-index: 10001;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* OPENED DRAWER */
+  .drawer.open {
+    max-height: 50vh; /* ⭐ default — 50% of screen */
+  }
+
+  /* TO USE AUTO HEIGHT -> uncomment below */
+  /* .drawer.open { max-height: fit-content; } */
+
+  /* TO USE FULL HEIGHT -> uncomment below */
+  /* .drawer.open { max-height: calc(100vh - 64px); } */
+
+  .drawer-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .drawer-menu a {
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+  }
+}
