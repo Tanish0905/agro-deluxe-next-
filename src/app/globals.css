@@ -4,8 +4,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Copperplate Gothic Bold */
+:root {
+  --font-copperplate: "Copperplate Gothic Bold", sans-serif;
+}
+
+.mobile-logo-text {
+  font-family: var(--font-copperplate);
+}
 
 /* Global base styles */
+
 body {
   font-family: 'Raleway';
   /* //'Figtree'; */

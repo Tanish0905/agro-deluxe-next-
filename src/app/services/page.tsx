@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { Globe, Shield, Truck, CheckCircle2, Leaf, Apple, Carrot } from 'lucide-react';
 import './Services.css';
 
-export default function Services ()
+const Services : React.FC =()=>
 {
   const router = useRouter();
   return (
@@ -223,4 +223,5 @@ export default function Services ()
       </div>
     </>
   );
-}
+};
+export default Services

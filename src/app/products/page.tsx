@@ -4,10 +4,8 @@ import { Apple, Carrot, Leaf, Grape } from 'lucide-react';
 import './Products.css';
 import { useRouter } from "next/navigation";
 
-export default function Products ()
-{
-    const router = useRouter();
-
+const Products: React.FC =()=> {
+  const router = useRouter();
   const categories = [
     {
       icon: Apple,
@@ -147,3 +145,5 @@ export default function Products ()
       </>
     );
 }
+
+  export default Products;

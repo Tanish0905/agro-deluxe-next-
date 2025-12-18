@@ -5,7 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './home.css';
 // import Footer from '@/components/Footer/Footer';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { ShieldCheck, Sprout, Truck, IndianRupee } from 'lucide-react';
+import Head from 'next/head';
 
 const Home: React.FC = () => {
   const router = useRouter();
@@ -14,14 +16,14 @@ const Home: React.FC = () => {
   const [prevIndex, setPrevIndex] = useState(0);
 
   const imageList = [
-    '/LaunchPageImages/Avocado.jpeg',
-    '/LaunchPageImages/Berries.jpeg',
-    '/LaunchPageImages/Chilly.jpeg',
-    '/LaunchPageImages/Dragon.jpeg',
-    '/LaunchPageImages/Mushroom.jpeg',
-    '/LaunchPageImages/Orange.jpeg',
-    '/LaunchPageImages/Something.jpeg',
-    '/LaunchPageImages/Something2.jpeg',
+    '/LaunchPageImages/Avocado.webp',
+    '/LaunchPageImages/Berries.webp',
+    '/LaunchPageImages/Chilly.webp',
+    '/LaunchPageImages/Dragon.webp',
+    '/LaunchPageImages/Mushroom.webp',
+    '/LaunchPageImages/Orange.webp',
+    '/LaunchPageImages/Something.webp',
+    '/LaunchPageImages/Something2.webp',
   ];
 
   useEffect(() => {
@@ -37,6 +39,63 @@ const Home: React.FC = () => {
 
   return (
     <>
+      {/* SEO Meta Tags */}
+      <Head>
+        <title>Agro Deluxe Growers | Reliable Produce for Hotels & Restaurants</title>
+        <meta
+          name="description"
+          content="Agro Deluxe Growers supplies exotic and imported produce to restaurants, hotels, and culinary facilities. Reliable, fresh, and direct-from-farm delivery."
+        />
+        <meta
+          name="keywords"
+          content="Agro Deluxe, HORECA, premium produce, exotic vegetables, imported fruits, farm-to-kitchen, B2B supply, hotel ingredients"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.agrodeluxegrowers.com/" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Agro Deluxe Growers | Reliable Produce for Hotels & Restaurants" />
+        <meta
+          property="og:description"
+          content="Agro Deluxe Growers supplies exotic and imported produce to restaurants, hotels, and culinary facilities. Reliable, fresh, and direct-from-farm delivery."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.agrodeluxegrowers.com/" />
+        <meta
+          property="og:image"
+          content="https://www.agrodeluxegrowers.com/LaunchPageImages/Avocado.webp"
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Agro Deluxe Growers | Reliable Produce" />
+        <meta
+          name="twitter:description"
+          content="Agro Deluxe Growers supplies exotic and imported produce to restaurants, hotels, and culinary facilities."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.agrodeluxegrowers.com/LaunchPageImages/Avocado.webp"
+        />
+      </Head>
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Agro Deluxe Growers",
+            "url": "https://www.agrodeluxegrowers.com",
+            "logo": "https://www.agrodeluxegrowers.com/logo.png",
+            "sameAs": ["https://www.linkedin.com/company/agrodeluxegrowers"],
+            "description": "Agro Deluxe Growers supplies exotic and imported produce to restaurants, hotels, and culinary facilities. Reliable, fresh, and direct-from-farm delivery."
+          }),
+        }}
+      />
+    <main>
+      {/* Page Content */}
       <div className="home-container">
         {/* LEFT TEXT SECTION */}
         <motion.div
@@ -92,16 +151,18 @@ const Home: React.FC = () => {
                 backfaceVisibility: 'hidden',
               }}
             >
-              <img
+              <Image
                 src={imageList[index]}
-                alt="toss-card"
+                alt="Fresh produce"
                 className="home-image"
+                fill
                 style={{
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
                   borderRadius: '24px',
                 }}
+                priority={index === 0}
               />
             </motion.div>
           </AnimatePresence>
@@ -165,8 +226,8 @@ const Home: React.FC = () => {
         <button className="home-cta-btn" onClick={() => router.push('/contact')}>
           Partner With Us Now
         </button>
-      </section>
-
+        </section>
+    </main>
     </>
   );
 };

@@ -2,9 +2,8 @@
 "use client"
 import { Target, Award, TrendingUp, Users } from 'lucide-react';
 import './About.css';
-// import Footer from '../../components/Footer/Footer';
 
-export default function About() {
+const About: React.FC =()=> {
   return (
     <>
       <div className="about-wrapper">
@@ -174,3 +173,5 @@ export default function About() {
     </>
   );
 }
+
+export default About;
