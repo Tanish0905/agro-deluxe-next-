@@ -1,11 +1,75 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client"
+"use client";
+
 import { Target, Award, TrendingUp, Users } from 'lucide-react';
 import './About.css';
+import Head from 'next/head';
 
-const About: React.FC =()=> {
+const About: React.FC = () => {
   return (
     <>
+      {/* ================= SEO META TAGS ================= */}
+      <Head>
+        <title>About Agro Deluxe Growers | HORECA Produce Supplier in Mumbai & Navi Mumbai</title>
+        <meta
+          name="description"
+          content="Learn about Agro Deluxe Growers, a Mumbai and Navi Mumbai based B2B supplier of exotic and imported produce trusted by hotels, restaurants, and catering businesses."
+        />
+        <link rel="canonical" href="https://www.agrodeluxegrowers.com/about" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About Agro Deluxe Growers | Trusted HORECA Produce Partner" />
+        <meta
+          property="og:description"
+          content="Agro Deluxe Growers is a reliable B2B supplier of premium produce for hotels and restaurants across Mumbai and Navi Mumbai."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.agrodeluxegrowers.com/about" />
+        <meta
+          property="og:image"
+          content="https://www.agrodeluxegrowers.com/LaunchPageImages/Avocado.webp"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Agro Deluxe Growers | HORECA Produce Supplier" />
+        <meta
+          name="twitter:description"
+          content="Mumbai & Navi Mumbai based supplier of exotic and imported produce for hotels and restaurants."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.agrodeluxegrowers.com/LaunchPageImages/Avocado.webp"
+        />
+      </Head>
+
+      {/* ================= STRUCTURED DATA ================= */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About Agro Deluxe Growers",
+            "url": "https://www.agrodeluxegrowers.com/about",
+            "mainEntity": {
+              "@type": "LocalBusiness",
+              "name": "Agro Deluxe Growers",
+              "description":
+                "Mumbai and Navi Mumbai based B2B supplier of exotic and imported fruits and vegetables for hotels, restaurants, and catering businesses.",
+              "areaServed": [
+                { "@type": "City", "name": "Mumbai" },
+                { "@type": "City", "name": "Navi Mumbai" }
+              ],
+              "sameAs": [
+                "https://www.linkedin.com/company/agrodeluxegrowers"
+              ]
+            }
+          }),
+        }}
+      />
+
       <div className="about-wrapper">
         {/* HERO SECTION */}
         <section className="about-hero-section">
@@ -64,7 +128,6 @@ const About: React.FC =()=> {
         {/* MAIN SECTION */}
         <section className="about-main-section">
           <div className="about-container">
-            {/* LEFT TEXT + RIGHT IMAGE */}
             <div className="about-grid">
               <div className="about-text-block">
                 <h2 className="about-heading">From Farm Gate to Hotel Plate</h2>
@@ -93,18 +156,17 @@ const About: React.FC =()=> {
                 <img
                   src="https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&w=800"
                   className="about-image"
-                  alt="Farm to kitchen"
+                  alt="Farm to kitchen produce supply chain for hotels and restaurants in Mumbai"
                 />
               </div>
             </div>
 
-            {/* GREEN FEATURE BOX */}
+            {/* FEATURE BOX */}
             <div className="about-feature-box">
               <h2 className="about-feature-title">The Agro Deluxe Difference</h2>
               <p className="about-feature-subtitle">Why Chefs and Procurement Managers Trust Us</p>
 
               <div className="about-feature-grid">
-                {/* CARD 1 */}
                 <div className="about-card">
                   <div className="about-card-header">
                     <div className="about-card-icon">
@@ -120,7 +182,6 @@ const About: React.FC =()=> {
                   </div>
                 </div>
 
-                {/* CARD 2 */}
                 <div className="about-card">
                   <div className="about-card-header">
                     <div className="about-card-icon">
@@ -136,7 +197,6 @@ const About: React.FC =()=> {
                   </div>
                 </div>
 
-                {/* CARD 3 */}
                 <div className="about-card">
                   <div className="about-card-header">
                     <div className="about-card-icon">
@@ -151,7 +211,6 @@ const About: React.FC =()=> {
                   </div>
                 </div>
 
-                {/* CARD 4 */}
                 <div className="about-card">
                   <div className="about-card-header">
                     <div className="about-card-icon">
@@ -172,6 +231,6 @@ const About: React.FC =()=> {
       </div>
     </>
   );
-}
+};
 
 export default About;
