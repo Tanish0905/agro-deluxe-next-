@@ -16,7 +16,16 @@ export const metadata: Metadata = {
     default: "Agro Deluxe Growers | HORECA Produce Supplier in Mumbai & Navi Mumbai",
     template: "%s | Agro Deluxe Growers",
   },
-
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  
   description:
     "Agro Deluxe Growers is a Mumbai & Navi Mumbai based B2B supplier of exotic and imported fruits and vegetables for hotels, restaurants, and catering businesses with reliable farm-to-kitchen delivery.",
 
