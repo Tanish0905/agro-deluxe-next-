@@ -76,7 +76,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -84,13 +83,45 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Agro Deluxe Growers",
+              "url": "https://www.agrodeluxegrowers.com",
+              "logo": "https://www.agrodeluxegrowers.com/logo.png"
+            }),
+          }}
+        />
+      </head>
       <body className={raleway.className}>
         <ScrollToTop />
         <Navbar />
-        <MobileNavbar/>
+        <MobileNavbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
 }
+
+// export default function RootLayout({
+//   children,
+// }: Readonly<{
+//   children: React.ReactNode;
+// }>) {
+//   return (
+//     <html lang="en">
+//       <body className={raleway.className}>
+//         <ScrollToTop />
+//         <Navbar />
+//         <MobileNavbar/>
+//         {children}
+//         <Footer/>
+//       </body>
+//     </html>
+//   );
+// }

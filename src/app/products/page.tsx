@@ -95,7 +95,22 @@ const Products: React.FC = () => {
             }}
           > premium </span> farms worldwide.
           </p>
+          <button
+            className="product-download-btn"
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/avomart-brochure.pdf";
+              link.download = "Avomart-Brochure.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+          >
+            Download Brochure
+          </button>
+
         </div>
+       
       </header>
 
       {/* PRODUCTS GRID */}
